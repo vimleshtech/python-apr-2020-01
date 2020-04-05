@@ -1,0 +1,154 @@
+Agenda:
+===============================
+Python Syntax
+Python variable and data type
+Python Input,print,end,format 
+Python Operator
+Python Type casting or type conversion 
+Python Condition : if, if else etc. 
+Python Loop 
+
+
+Python Syntax:
+==========================
+#	single line comment (inactive line)
+
+'''
+	///	multi line comment
+	///
+'''
+	or 
+"""
+	//	multi line comment
+	//
+"""
+
+'hi .... 4'  	str
+	or
+"hi .... 5" 	str
+
+[]		list
+()		tuple,function 
+{}		dict,set
+
+Python variable and data type
+=======================================
+variable: is temp. memory where data can be stored 
+	a =555 #here a is variable and 555 data 
+	age = 17	
+	name ="nitin" #here age, naem are variable
+
+	correct syntax:
+		a =11
+		age =55
+		a_b =555
+		a,b =6566,444
+		a5 =66
+	incorrect syntax:
+		a b =555
+		1a  =555
+		a-b =666
+
+Data type : is allocation of memory and categor the data 
+	  : however python does allocate memory automatically 
+	  a =11   # int
+   	  a='11'  # str 
+
+There are following types of data type:
+		-- single  value data type ---
+	int			a =555
+	float			f =5666.6666	
+	str			s ='flkfjfjdg55676&&'  or s ="fkjfhjh5566444"
+	bool			b = True   or False 
+				Note : T and F should be in upper case 
+
+		---- multiple valeus data type ----
+
+	list			a= [11,33,5,6,33,'fff',True,'fff']
+				    0  1  2 3  4   5    6     7
+				-list index start from 0
+				-list last index is len - 1 
+				-list is mutable / data can be changed in list 
+
+	tuple			t =(111,33,5,6,7,3,'fff',True)
+				    0   1   2  3  .....	
+				-tuple index start from 0
+				-tuple last index is len - 1 
+				-tuple is imutable / data cannot be changed/ read only
+				-tuple is faster than list 
+			
+	dict			d ={'a':'alpha',1:'one','d':'delta','b':'beta',10:[11,33]}
+			             a          1         d          b          10 		
+				-dict is key value pair
+				-data will be stored on against the key
+				-key is user defined index 
+
+	set			s ={'dove','iphone','dove'}
+				-set contains unique value
+				-duplicate value will be removed automatically
+				-one dove will be removed from above set
+
+	
+Python Input,print,end,format 
+===========================================
+print()		#show the message or data to user 
+		#print and new line 
+
+end=''		#end is keyword which stop the new line 
+
+
+input()		#read the data from user
+		#default input type is str 			
+
+
+format()	# is placeholder,that means replace value between string 
+
+
+Python Operator:
+======================
+Arithmetic:
+	+		1+3= 4
+	-		1-4 = -3
+	*		2*3 = 6
+	**		2**3 = 8	(2 power 3)
+	/		23/10 =2.3	(return float)
+	//		23//10 =2 	(return int)	
+	%		23%10 = 3	(return moduls)
+Conditional Operator:
+	>		is greater
+	>=		is greater equal
+	<		is less than
+	<=		is less than equal
+	==		is equal 
+	!=		is not equal
+	in		in list,tuple ..
+	not in 		not in in list , tuple 
+
+Assignment Operator:
+	=		a =111  assign 111 over a 
+	+=		a+=1      or a =a+1
+	-=		a-=1	  or a =a-1
+
+Logical Operator:	to compare two or more than two conditions
+	and		: if both condition match then result is true otherwise false
+	or		: if any one is true then true otherwise false 
+
+
+	
+
+	
+		
+	
+
+
+
+
+		
+
+	
+	
+
+	
+
+
+
