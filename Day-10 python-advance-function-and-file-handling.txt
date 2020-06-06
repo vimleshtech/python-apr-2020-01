@@ -1,0 +1,34 @@
+Topics
+==========================
+-Advance Function
+	- argument with default value
+	- argument with dynamic count of inputs 
+
+-File Handling: read and write operation from and with file
+	There are following inbuilt functions	
+		- open("path","mode")	: load the file from physical location to python memory
+				path: physical location of the file
+				mode:
+					r - read
+					w - write
+					a - append
+					
+				
+		- close()	: save and close the file
+		- read()	: read all content from file
+		- readline()	: read first line from file
+		- readlines()	: read all lines from file and convert list, evry line of file will become one element of list
+		- seek()	: return current index	
+		- reset()	: reset the index from 0
+
+
+		
+Question:
+	-wap to read data from file and get the count given word
+		example
+			count of "is"
+	-wap to check given word is present in file or not 
+
+		
+	
+
