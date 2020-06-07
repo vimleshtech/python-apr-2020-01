@@ -1,0 +1,27 @@
+FileHandling
+====================
+	r - read
+	w - write
+	a - append
+
+
+Exception Handling
+======================
+Exception : is runtime error which may or may not occur 
+Handling  : tackle the error when this will occur 
+
+Use of Exception handling:
+	- Prevent the program (entire code) from failure due to single or few error
+	- Show the custom (user friendly ) message
+	- Notify the error message over email or store the error log 
+
+
+There are following keywords:
+	- try		: logical statement/expression/code should be written in try block
+	- except	: will receive(handle) the error when anything went wrong in try block	
+	- finally	: finally is block which execute always either error will occur or not
+				
+	- raise		: create or generate error	
+	- pass	 	: continue the without any logical statement 
+
+
