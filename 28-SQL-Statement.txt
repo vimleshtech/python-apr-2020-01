@@ -1,0 +1,236 @@
+SQL Concepts
+===================
+DBMS : database management system
+	- excel
+	- ms access
+RDBMS: relational database management system
+	- MY SQL Server
+	- MS SQL 
+	- Oracle
+	- IBM DB2
+
+
+MY SQL Server
+=======================
+Server name or host name: 
+			localhost or ipaddress(127.0.0.1)
+
+User Name: root
+Password : root 
+
+SQL Statements | Commands
+===========================
+show databases;				-- show list of existing databases
+
+create database database_name;		-- create new database 
+
+use database_name;			-- switch database or go inside database
+
+show tables;				-- show list of existing tables
+
+create table tbl_name (id int, name varchar(100), age int, gender varchar(10)); --create table
+			int - number
+			 varchar - alpha numeric, 100 num of chars
+
+insert into tbl_name(id,name,gender,age) values(1,'nitin','male',24);   --save data
+
+select * from tbl_name;				--show data , * : show all columns
+
+select id,name from tbl_name;			--show selected column or fields 
+
+select * from tbl_name where id =1;		-- show selected rows 
+
+update tbl_name set name='Nitin sharma' where id =1;  --update existing row
+
+delete from tbl_name where id =1; 		--remove row 
+
+
+
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| hrms               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> create database sales;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| hrms               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sales              |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use sales;
+Database changed
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> create table employee(id int, name varchar(100), age int, gender varchar(10));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_sales |
++-----------------+
+| employee        |
++-----------------+
+1 row in set (0.01 sec)
+
+mysql> desc employee;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| id     | int          | YES  |     | NULL    |       |
+| name   | varchar(100) | YES  |     | NULL    |       |
+| age    | int          | YES  |     | NULL    |       |
+| gender | varchar(10)  | YES  |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> insert into employee(id,name,age,gender) values(1,'raman',23,'male');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from employee;
++------+-------+------+--------+
+| id   | name  | age  | gender |
++------+-------+------+--------+
+|    1 | raman |   23 | male   |
++------+-------+------+--------+
+1 row in set (0.00 sec)
+
+mysql> insert into employee(id,name,age,gender) values(2,'monika',26,'female');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee(id,name,age,gender) values(3,'chahat',29,'female');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee(id,name,age,gender) values(10,'raman',30,'male');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++------+--------+------+--------+
+| id   | name   | age  | gender |
++------+--------+------+--------+
+|    1 | raman  |   23 | male   |
+|    2 | monika |   26 | female |
+|    3 | chahat |   29 | female |
+|   10 | raman  |   30 | male   |
++------+--------+------+--------+
+4 rows in set (0.00 sec)
+
+mysql> select name,gender from employee;
++--------+--------+
+| name   | gender |
++--------+--------+
+| raman  | male   |
+| monika | female |
+| chahat | female |
+| raman  | male   |
++--------+--------+
+4 rows in set (0.00 sec)
+
+mysql> select * from employee where id>2;
++------+--------+------+--------+
+| id   | name   | age  | gender |
++------+--------+------+--------+
+|    3 | chahat |   29 | female |
+|   10 | raman  |   30 | male   |
++------+--------+------+--------+
+2 rows in set (0.00 sec)
+
+mysql> select name from employee where id>2;
++--------+
+| name   |
++--------+
+| chahat |
+| raman  |
++--------+
+2 rows in set (0.00 sec)
+
+mysql> select name,age from employee where id>2;
++--------+------+
+| name   | age  |
++--------+------+
+| chahat |   29 |
+| raman  |   30 |
++--------+------+
+2 rows in set (0.00 sec)
+
+mysql> select * from employee;
++------+--------+------+--------+
+| id   | name   | age  | gender |
++------+--------+------+--------+
+|    1 | raman  |   23 | male   |
+|    2 | monika |   26 | female |
+|    3 | chahat |   29 | female |
+|   10 | raman  |   30 | male   |
++------+--------+------+--------+
+4 rows in set (0.00 sec)
+
+mysql> update employee set name='Chahat Shrama' where id=3;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee;
++------+---------------+------+--------+
+| id   | name          | age  | gender |
++------+---------------+------+--------+
+|    1 | raman         |   23 | male   |
+|    2 | monika        |   26 | female |
+|    3 | Chahat Shrama |   29 | female |
+|   10 | raman         |   30 | male   |
++------+---------------+------+--------+
+4 rows in set (0.00 sec)
+
+mysql> delete from employee where id=2;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++------+---------------+------+--------+
+| id   | name          | age  | gender |
++------+---------------+------+--------+
+|    1 | raman         |   23 | male   |
+|    3 | Chahat Shrama |   29 | female |
+|   10 | raman         |   30 | male   |
++------+---------------+------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee order by age desc;
++------+---------------+------+--------+
+| id   | name          | age  | gender |
++------+---------------+------+--------+
+|   10 | raman         |   30 | male   |
+|    3 | Chahat Shrama |   29 | female |
+|    1 | raman         |   23 | male   |
++------+---------------+------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select gender,count(gender) from employee group by gender;
++--------+---------------+
+| gender | count(gender) |
++--------+---------------+
+| male   |             2 |
+| female |             1 |
++--------+---------------+
+2 rows in set (0.00 sec)
+
+
+
+ 
+
+
