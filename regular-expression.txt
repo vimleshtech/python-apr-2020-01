@@ -1,0 +1,33 @@
+Regular Expresion : is also known pattern matching
+=======================================================
+Example
+	raman@gmail  -valdiate the email id is in write format or not
+
+
+Pattern
+	/d	: digits [0-9]	
+	/D	: non-digit , except 0-9
+	/w	: alpha-numeric  , except special chars
+	/W	: non alpha-numeric, special chars
+	.	: any char (number, special char, alpabets)
+	*	: any len / any count
+	()	: group 
+	?	: may or may not
+	{min,max}: min length and max length 
+	^	: start with
+	$	: end with 
+	
+
+
+Methods or Functions?
+	findall()
+	split()
+	match()
+	search()
+	groups()
+	join()
+	
+	
+
+	
+
